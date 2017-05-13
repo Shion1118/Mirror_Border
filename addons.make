@@ -1,0 +1,6 @@
+ofxCv
+ofxDatGui
+ofxDelaunay
+ofxFaceTracker
+ofxOpenCv
+ofxSyphon
