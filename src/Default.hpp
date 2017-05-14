@@ -6,7 +6,7 @@
 //
 //
 
-#pragma onece
+#pragma once
 
 #include "ofMain.h"
 

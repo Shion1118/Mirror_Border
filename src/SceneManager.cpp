@@ -11,9 +11,6 @@
 #include "SceneElement.cpp"
 #include "ofMain.h"
 
-#include "Face.hpp"
-#include "Default.hpp"
-
 class SceneManager{
 protected:
     int elementIndex = 0;

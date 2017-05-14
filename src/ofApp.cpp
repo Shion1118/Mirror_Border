@@ -5,8 +5,10 @@ void ofApp::setup(){
     
     ofSetVerticalSync(true);
     
+    face.init(0, 1920, 1080);
+    
     manager.addElement(new Default());
-    manager.addElement(new Face());
+    manager.addElement(new FaceNoise(&face));
     manager.setup();
     
 }
@@ -14,6 +16,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     
+    face.update();
     manager.update();
     
 }

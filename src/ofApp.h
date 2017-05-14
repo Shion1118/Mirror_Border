@@ -1,9 +1,11 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxSyphon.h"
 
 #include "SceneManager.cpp"
+#include "FaceCam.hpp"
+#include "Default.hpp"
+#include "FaceNoise.hpp"
 
 class ofApp : public ofBaseApp{
     
@@ -26,6 +28,6 @@ class ofApp : public ofBaseApp{
     
     
         SceneManager manager;
-        ofxSyphonServer syphon;
+        FaceCam face;
     
 };

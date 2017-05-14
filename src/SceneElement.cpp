@@ -5,6 +5,7 @@
 //  Created by Fukushima Shion on 2017/05/13.
 //
 //
+
 #pragma once
 
 #include "ofMain.h"
