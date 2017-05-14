@@ -3,4 +3,3 @@ ofxDatGui
 ofxDelaunay
 ofxFaceTracker
 ofxOpenCv
-ofxSyphon

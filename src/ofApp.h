@@ -6,6 +6,7 @@
 #include "FaceCam.hpp"
 #include "Default.hpp"
 #include "FaceNoise.hpp"
+#include "Smile.hpp"
 
 class ofApp : public ofBaseApp{
     

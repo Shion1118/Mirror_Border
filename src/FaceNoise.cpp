@@ -20,6 +20,7 @@ FaceNoise::FaceNoise(FaceCam *fc){
 void FaceNoise::setup(){
     
     ofBlendMode(OF_BLENDMODE_ADD);
+
 }
 
 //--------------------------------------------------------------
@@ -50,17 +51,11 @@ void FaceNoise::draw(){
 
     ofSetColor(255);
     
-    face->camImage.draw(0, 0);
+    ofPushStyle();
+    
+//    face->camImage.draw(0, 0);
     
     if(face->isFaceFound()) {
-        
-        ofPushStyle();
-        ofPushMatrix();
-        
-        ofTranslate(face->facePosition);
-        ofScale(face->faceScale, face->faceScale);
-        
-        applyMatrix(face->faceMatrix);
         
         ofSetLineWidth(1);
         ofSetColor(255);
@@ -68,20 +63,17 @@ void FaceNoise::draw(){
         
         ofSetColor(ofColor::fromHsb(ofRandom(255), 255, 255));
         noiseMesh.drawFaces();
-        
-        
-        ofPopMatrix();
-        ofPopStyle();
+
     }
+
+    ofPopStyle();
+    
 }
 
 //--------------------------------------------------------------
 void FaceNoise::keyPressed(int key){
     
     switch (key) {
-        case 'r':
-//            tracker.reset();
-            break;
         case 'l':
             noiseSize++;
             break;

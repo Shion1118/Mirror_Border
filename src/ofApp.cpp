@@ -9,6 +9,7 @@ void ofApp::setup(){
     
     manager.addElement(new Default());
     manager.addElement(new FaceNoise(&face));
+    manager.addElement(new Smile(&face));
     manager.setup();
     
 }
@@ -34,6 +35,9 @@ void ofApp::keyPressed(int key){
     switch (key) {
         case ' ':
             manager.nextElement();
+            break;
+        case 'r':
+            face.reset();
             break;
         default:
             manager.keyPressed(key);
