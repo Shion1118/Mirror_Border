@@ -9,8 +9,9 @@ void Face::setup(){
     
     ofBlendMode(OF_BLENDMODE_ADD);
     
-    cam.setDeviceID(2);
-    cam.initGrabber(1280, 720);
+    cam.listDevices();
+    cam.setDeviceID(0);
+    cam.initGrabber(1920, 1080);
     
     tracker.setup();
 }
@@ -21,6 +22,10 @@ void Face::update(){
     cam.update();
     
     if(cam.isFrameNew()) {
+        camFbo.begin();
+        cam.draw(0, 0);
+        camFbo.end();
+        
         tracker.update(toCv(cam));
         
         if(tracker.getFound()) {

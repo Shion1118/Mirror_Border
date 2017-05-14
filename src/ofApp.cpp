@@ -5,9 +5,9 @@ void ofApp::setup(){
     
     ofSetVerticalSync(true);
     
+    manager.addElement(new Default());
+    manager.addElement(new Face());
     manager.setup();
-    
-    syphon.setName("MIRROR");
     
 }
 
@@ -22,8 +22,6 @@ void ofApp::update(){
 void ofApp::draw(){
     
     manager.draw();
-    
-    syphon.publishScreen();
     
 }
 

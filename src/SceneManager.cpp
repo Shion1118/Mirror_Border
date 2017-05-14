@@ -12,6 +12,7 @@
 #include "ofMain.h"
 
 #include "Face.hpp"
+#include "Default.hpp"
 
 class SceneManager{
 protected:
@@ -21,7 +22,6 @@ protected:
 public:
     
     void setup(){
-        this->elements.push_back(new Face());
         for(int i = 0; i < elements.size(); i++){
             elements[i]->setup();
         }
@@ -38,6 +38,10 @@ public:
         for(int i = 0; i < elements.size(); i++){
             elements[i]->end();
         }
+    }
+    
+    void addElement(SceneElement* element) {
+        elements.push_back(element);
     }
     
     void changeElement(int index){

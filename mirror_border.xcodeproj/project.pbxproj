@@ -10,6 +10,7 @@
 		0522A0001EC6EFC000B1613B /* SceneElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05229FFF1EC6EFC000B1613B /* SceneElement.cpp */; };
 		0522A0021EC6F0BC00B1613B /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0522A0011EC6F0BC00B1613B /* SceneManager.cpp */; };
 		0522A0071EC805CA00B1613B /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0522A0051EC805CA00B1613B /* ofApp.cpp */; };
+		0522A00B1EC8103A00B1613B /* Default.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0522A0091EC8103A00B1613B /* Default.cpp */; };
 		091CD626FECB03B3A6B3A1B2 /* PAW.cc in Sources */ = {isa = PBXBuildFile; fileRef = 04BD78075F8C2DEC76B2F33A /* PAW.cc */; };
 		10B69DE456AED1288FC9316B /* Tracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A810DF70319A10353588F5DB /* Tracker.cpp */; };
 		11DF9AB1B4EAA63E3B190CA0 /* ofxSyphonServerDirectory.mm in Sources */ = {isa = PBXBuildFile; fileRef = E723BEF4C55D236E24639608 /* ofxSyphonServerDirectory.mm */; };
@@ -102,6 +103,8 @@
 		0522A0011EC6F0BC00B1613B /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
 		0522A0051EC805CA00B1613B /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
 		0522A0061EC805CA00B1613B /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
+		0522A0091EC8103A00B1613B /* Default.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Default.cpp; sourceTree = "<group>"; };
+		0522A00A1EC8103A00B1613B /* Default.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Default.hpp; sourceTree = "<group>"; };
 		057122A817D12571F8C0C7A4 /* ofxCvGrayscaleImage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxCvGrayscaleImage.cpp; path = ../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.cpp; sourceTree = SOURCE_ROOT; };
 		057D8E7580EA21E2254ADDDA /* camera.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = camera.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/stitching/detail/camera.hpp; sourceTree = SOURCE_ROOT; };
 		075597E52E99BDE94F8036B2 /* fast_marching_inl.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = fast_marching_inl.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/videostab/fast_marching_inl.hpp; sourceTree = SOURCE_ROOT; };
@@ -410,6 +413,8 @@
 			children = (
 				E4B69E1E0A3A1BDC003C02F2 /* Face.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* Face.hpp */,
+				0522A0091EC8103A00B1613B /* Default.cpp */,
+				0522A00A1EC8103A00B1613B /* Default.hpp */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1375,6 +1380,7 @@
 				F451166A6C72528F3F009F6C /* Expression.cpp in Sources */,
 				8AC885FBC5325950337592D2 /* ExpressionClassifier.cpp in Sources */,
 				24735CD2E138DC5C1F0A1085 /* ofxFaceTracker.cpp in Sources */,
+				0522A00B1EC8103A00B1613B /* Default.cpp in Sources */,
 				80AE40254BBE0F03C25563C1 /* CLM.cc in Sources */,
 				9F4DA577D30F7B7CA7B8E5F8 /* FCheck.cc in Sources */,
 				6E23C8DD86B189759F85B24F /* FDet.cc in Sources */,

@@ -18,6 +18,7 @@ class Face : public SceneElement{
         void keyPressed(int key) override;
     
         ofVideoGrabber cam;
+        ofFbo camFbo;
         ofxFaceTrackerThreaded tracker;
     
         ofVec2f facePosition;
