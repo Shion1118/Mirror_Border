@@ -19,6 +19,7 @@ public:
     void update();
     
     bool isFaceFound();
+    void reset();
     ofImage getImage();
     vector<ofMeshFace> getMeshFaces();
     
