@@ -8,6 +8,7 @@ void ofApp::setup(){
     face.init(0, 1920, 1080);
     
     manager.addElement(new Default());
+    manager.addElement(new FaceDetect(&face));
     manager.addElement(new FaceNoise(&face));
     manager.addElement(new Smile(&face));
     manager.setup();
@@ -19,6 +20,10 @@ void ofApp::update(){
     
     face.update();
     manager.update();
+    
+    if(manager.getCurrentIndex() == 0 && face.isFaceFound()) {
+        manager.changeElement(1);
+    }
     
 }
 

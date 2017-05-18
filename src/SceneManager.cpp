@@ -58,6 +58,10 @@ public:
         }
     };
     
+    unsigned int getCurrentIndex(){
+        return elementIndex;
+    }
+    
 //--------------------------------------------------------------
     
     virtual void keyPressed(int key){

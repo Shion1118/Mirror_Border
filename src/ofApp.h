@@ -5,6 +5,7 @@
 #include "SceneManager.cpp"
 #include "FaceCam.hpp"
 #include "Default.hpp"
+#include "FaceDetect.hpp"
 #include "FaceNoise.hpp"
 #include "Smile.hpp"
 

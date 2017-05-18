@@ -3,3 +3,4 @@ ofxDatGui
 ofxDelaunay
 ofxFaceTracker
 ofxOpenCv
+ofxPostGlitch

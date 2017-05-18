@@ -20,7 +20,7 @@ void Smile::setup() {
     
     classifier.load("expressions");
     
-    font.load("Lato-Thin.ttf", 40);
+    font.load("font/Lato-Thin.ttf", 40);
     
 }
 

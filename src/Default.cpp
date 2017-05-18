@@ -12,7 +12,7 @@ void Default::setup() {
     
     ofSetBackgroundColor(0);
     
-    font.load("Lato-Thin.ttf", 40);
+    font.load("font/Lato-Thin.ttf", 40);
     
 }
 
