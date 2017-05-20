@@ -8,9 +8,10 @@ void ofApp::setup(){
     face.init(0, 1920, 1080);
     
     manager.addElement(new Default());
-    manager.addElement(new FaceDetect(&face));
+//    manager.addElement(new FaceDetect(&face));
     manager.addElement(new FaceNoise(&face));
     manager.addElement(new Smile(&face));
+//    manager.addElement(new Noise(&face));
     manager.setup();
     
 }
@@ -21,9 +22,16 @@ void ofApp::update(){
     face.update();
     manager.update();
     
-    if(manager.getCurrentIndex() == 0 && face.isFaceFound()) {
-        manager.changeElement(1);
-    }
+//    if(face.isFaceFound()) {
+//        foundTime = ofGetElapsedTimef();
+//        if(manager.getCurrentIndex() == 0) {
+//            manager.changeElement(1);
+//        }
+//    } else {
+//        if((ofGetElapsedTimef() - foundTime) > TIMEOUT) {
+//            manager.changeElement(0);
+//        }
+//    }
     
 }
 
@@ -49,6 +57,10 @@ void ofApp::keyPressed(int key){
             break;
     };
     
+}
+
+void ofApp::nextScene() {
+    manager.nextElement();
 }
 
 //--------------------------------------------------------------

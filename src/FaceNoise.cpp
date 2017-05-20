@@ -57,7 +57,7 @@ void FaceNoise::draw(){
     
     if(face->isFaceFound()) {
         
-        ofSetLineWidth(1);
+        ofSetLineWidth(5);
         ofSetColor(255);
         face->faceMesh.drawWireframe();
         

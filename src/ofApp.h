@@ -8,6 +8,7 @@
 #include "FaceDetect.hpp"
 #include "FaceNoise.hpp"
 #include "Smile.hpp"
+#include "Noise.hpp"
 
 class ofApp : public ofBaseApp{
     
@@ -15,7 +16,9 @@ class ofApp : public ofBaseApp{
         void setup();
         void update();
         void draw();
-        
+    
+        void nextScene();
+    
         void keyPressed(int key);
         void keyReleased(int key);
         void mouseMoved(int x, int y );
@@ -31,5 +34,8 @@ class ofApp : public ofBaseApp{
     
         SceneManager manager;
         FaceCam face;
+    
+        static const int TIMEOUT = 5000;
+        float foundTime;
     
 };

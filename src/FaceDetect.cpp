@@ -16,14 +16,19 @@ void FaceDetect::setup() {
     
     ofSetBackgroundColor(0);
     
-    font.load("font/Lato-Thin.ttf", 40);
+    font.load("font/Lato-Light.ttf", 40);
     
 }
 
 void FaceDetect::update() {
     
     if(face->isFaceFound()) {
-        foundTime = ofGetElapsedTimef();
+        if(face->facePosition.distance(ofVec2f(ofGetWidth()/2, ofGetHeight())/2) < 50) {
+            text = "OK";
+            
+        } else {
+            text = "Please adjust your face position";
+        }
     }
     
 }
@@ -38,5 +43,8 @@ void FaceDetect::draw() {
     ofNoFill();
     ofDrawRectangle(-350, -350, 700, 700);
     ofPopMatrix();
+    
+    textRec = font.getStringBoundingBox(text, 0, 0);
+    font.drawString(text, ofGetWidth()/2 - textRec.width/2, ofGetHeight()/2 - textRec.height/2);
     
 }

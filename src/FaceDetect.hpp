@@ -24,6 +24,7 @@ public:
     FaceCam *face;
     ofTrueTypeFont font;
     
-    float foundTime;
+    string text = "No Face";
+    ofRectangle textRec;
     
 };

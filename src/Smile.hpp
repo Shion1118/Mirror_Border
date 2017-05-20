@@ -26,6 +26,7 @@ public:
     
     FaceCam *face;
     ExpressionClassifier classifier;
+    float smileProbability;
     
     ofTrueTypeFont font;
     string text = "No Face";

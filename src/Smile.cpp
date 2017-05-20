@@ -20,7 +20,7 @@ void Smile::setup() {
     
     classifier.load("expressions");
     
-    font.load("font/Lato-Thin.ttf", 40);
+    font.load("font/Lato-Light.ttf", 40);
     
 }
 
@@ -28,6 +28,7 @@ void Smile::update() {
     
     if(face->isFaceFound()) {
         classifier.classify(face->tracker);
+        smileProbability = classifier.getProbability(1);
     }
     
 }
@@ -36,13 +37,28 @@ void Smile::draw() {
     
     ofSetColor(255);
     if(face->isFaceFound()) {
-        text = classifier.getDescription(classifier.getPrimaryExpression());
+        text = ofToUpper(classifier.getDescription(classifier.getPrimaryExpression()));
     }else{
         text = "No Face";
     }
     
+    ofPushMatrix();
+    ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
+    
     textRec = font.getStringBoundingBox(text, 0, 0);
-    font.drawString(text, ofGetWidth()/2 - textRec.width/2, ofGetHeight()/2 - textRec.height/2);
+    font.drawString(text,  -textRec.width/2, -textRec.height/2);
+    
+    if(smileProbability < 0.25) {
+        ofSetColor(255, 100, 100);
+    } else if(smileProbability < 0.5) {
+        ofSetColor(170, 170, 100);
+    } else {
+        ofSetColor(100, 255, 100);
+    }
+    ofSetLineWidth(100);
+    ofDrawLine(-(smileProbability * 150)/2, textRec.height/2, (smileProbability * 150)/2, textRec.height/2);
+    
+    ofPopMatrix();
     
 }
 

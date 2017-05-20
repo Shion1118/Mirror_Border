@@ -6,9 +6,28 @@
 //
 //
 
-#ifndef Noise_hpp
-#define Noise_hpp
+#pragma once
 
-#include <stdio.h>
+#include "ofMain.h"
+#include "ofxPostGlitch.h"
 
-#endif /* Noise_hpp */
+#include "FaceCam.hpp"
+#include "SceneElement.cpp"
+
+class Noise : public SceneElement{
+    
+public:
+    Noise(FaceCam *fc);
+    void setup() override;
+    void update() override;
+    void draw() override;
+    
+    void keyPressed(int key) override;
+    
+    FaceCam *face;
+    
+    ofFbo noiseFbo;
+    ofxPostGlitch glitch;
+    
+};
+
